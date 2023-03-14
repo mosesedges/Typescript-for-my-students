@@ -82,3 +82,24 @@ var newGame = {
     points: gamerPoints,
     topScores: gameWinners
 };
+console.log(newGame);
+var rectangle = {
+    width: 220,
+    height: 480
+};
+console.log(rectangle);
+var shapeColor = {
+    width: 180,
+    height: 210,
+    shape: "rectangle",
+    color: "orange"
+};
+console.log(shapeColor);
+// ------ Union Types -------
+// when using unions you need to know what your type is to avoid errors 
+// we use unions when we know we will have different types of parameter like (number | string) the pipe which stands for OR mean we expect to have a number or string parameter
+function response(code) {
+    console.log("this is our status code ".concat(code));
+}
+response(200);
+response("404");
