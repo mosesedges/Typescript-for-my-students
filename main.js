@@ -48,7 +48,37 @@ var staffIfo = {
     lastName: "Doe",
     email: "jdoe@example.com",
     age: 21,
-    salary: 42000,
     active: true
 };
-console.log(staffIfo);
+console.log(staffIfo.salary = 42000);
+// ------------ type Enum --------------
+// on default enums will initialize the first value to 0 
+var CardinalPoints;
+(function (CardinalPoints) {
+    CardinalPoints[CardinalPoints["North"] = 2] = "North";
+    CardinalPoints[CardinalPoints["South"] = 3] = "South";
+    CardinalPoints[CardinalPoints["East"] = 4] = "East";
+    CardinalPoints[CardinalPoints["West"] = 5] = "West";
+})(CardinalPoints || (CardinalPoints = {}));
+console.log(CardinalPoints.West);
+// you can assign string or numeric values to this set of constants 
+var statusCode;
+(function (statusCode) {
+    statusCode[statusCode["NotFound"] = 400] = "NotFound";
+    statusCode[statusCode["Success"] = 200] = "Success";
+    statusCode["Language"] = "English";
+    statusCode[statusCode["BadRequest"] = 400] = "BadRequest";
+})(statusCode || (statusCode = {}));
+if (statusCode.Success === 200 && CardinalPoints.South === 3) {
+    console.log("fresh Start : ".concat(statusCode.Language));
+}
+var gameName = 'Hengo';
+var gamerName = "Mike";
+var gamerPoints = 245;
+var gameWinners = ["Jerry", "tom", "Duck"];
+var newGame = {
+    game: gameName,
+    name: gamerName,
+    points: gamerPoints,
+    topScores: gameWinners
+};

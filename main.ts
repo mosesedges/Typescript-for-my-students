@@ -73,8 +73,54 @@ firstName:"John",
 lastName: "Doe",
 email: "jdoe@example.com",
 age: 21,
-salary: 42000,
 active: true
 }
 
-console.log(staffIfo)
+console.log(staffIfo.salary= 42000)
+
+
+// ------------ type Enum --------------
+
+// on default enums will initialize the first value to 0 
+enum CardinalPoints { North = 2, South, East, West}
+
+console.log(CardinalPoints.West)
+
+// you can assign string or numeric values to this set of constants 
+enum statusCode {
+    NotFound = 400,
+    Success = 200,
+    Language = "English",
+    BadRequest = 400
+}
+
+if(statusCode.Success === 200 && CardinalPoints.South === 3){
+    console.log(`fresh Start : ${statusCode.Language}`)
+}
+
+
+// ------------ type Aliase and interfaces --------------------
+type Game = string
+type Player = string
+type score = number
+type winners  = string[]
+
+type NewGame = {
+    game:Game,
+    name: Player,
+    points: score,
+    topScores: winners
+
+}
+
+const gameName: Game = 'Hengo'
+const gamerName: Player = "Mike"
+const gamerPoints: score = 245
+const gameWinners: winners = ["Jerry", "tom", "Duck"]
+
+const newGame: NewGame = {
+    game:gameName,
+    name: gamerName,
+    points: gamerPoints,
+    topScores: gameWinners
+}
