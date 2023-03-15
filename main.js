@@ -103,3 +103,26 @@ function response(code) {
 }
 response(200);
 response("404");
+var newAccount = "Justice Figo";
+// ----------- functions -------
+// when writing function in typescript you have to explicitly specify the parameters type and the return value
+// if the function retuns nothing you specify with the void keyword
+function newFunc() {
+    return " typescript is cool";
+}
+function myfunc(position, name) {
+    return "student position is ".concat(position, " with the name ").concat(name);
+}
+function lastFunc() {
+    console.log("Void means the function returns nothing");
+}
+newFunc();
+myfunc(12, "Ola");
+lastFunc();
+//----------casting -------------
+// casting (changing type) works just like casting in any other program
+// casting a variable won't change it value vlc
+var newAge = 22;
+console.log(newAge % 4);
+var newPerson = "Dylan";
+console.log(newPerson.length);

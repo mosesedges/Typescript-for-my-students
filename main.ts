@@ -168,4 +168,35 @@ function response(code: string | number){
 response(200)
 response("404")
 
+const newAccount: string | boolean = "Justice Figo"
 
+// ----------- functions -------
+
+// when writing function in typescript you have to explicitly specify the parameters type and the return value
+// if the function retuns nothing you specify with the void keyword
+
+function newFunc():string {
+    return " typescript is cool"
+}
+
+function myfunc(position: number, name: string): number | string {
+    return `student position is ${position} with the name ${name}`
+}
+
+function lastFunc(): void{
+    console.log("Void means the function returns nothing")
+}
+
+newFunc()
+myfunc(12, "Ola")
+lastFunc()
+
+//----------casting -------------
+// casting (changing type) works just like casting in any other program
+// casting a variable won't change it value vlc
+
+let newAge : unknown = 22
+console.log((newAge as number) % 4)
+
+let newPerson: any = "Dylan"
+console.log((<string>newPerson).length)
