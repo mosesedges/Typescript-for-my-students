@@ -200,3 +200,28 @@ console.log((newAge as number) % 4)
 
 let newPerson: any = "Dylan"
 console.log((<string>newPerson).length)
+
+// classes in typescript include modifiers that control visibility of class members (public = members are visible anywhere, 
+//(private = can only be accessed in the class they are decleared, it can't be visible outside the class not even in sub classes
+//(protected = can be accessed within it class and subclass that extend the it class 
+
+// example of a simple class
+
+class Animal{
+    name: string 
+    age: number
+    endangered: boolean
+    constructor(name: string, age: number, endangered: boolean) {
+        this.name = name
+        this.age = age
+        this.endangered = endangered
+    }
+
+    getInfo(): string {
+        return `My name is ${this.name} I am ${this.age} years old and it is ${this.endangered} that I am endangered`
+    }
+}
+
+const Cat = new Animal("Tom", 4, false)
+
+console.log(Cat.getInfo())
