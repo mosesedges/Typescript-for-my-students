@@ -251,5 +251,13 @@ class Car{
             console.log(this.name)
         }, 2000)}`
     }
+
+}
+class Toyota extends Car{
+    public Engine: string | number
+    constructor(name: string, brand: string, chasisNumber: number, model:string, Engine:string |number){
+        super(name, brand, chasisNumber, model);
+        this.Engine = Engine
+    }
 }
 
