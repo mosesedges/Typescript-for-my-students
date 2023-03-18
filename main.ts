@@ -223,5 +223,33 @@ class Animal{
 }
 
 const Cat = new Animal("Tom", 4, false)
-
 console.log(Cat.getInfo())
+
+class Car{
+    name: string
+    public brand: string
+    protected chasisNumber: number 
+    private model: string
+    
+    constructor(name: string, brand: string, chasisNumber: number, model:string){
+        this.name = name
+        this.brand = brand
+        this.chasisNumber = chasisNumber
+        this.model = model
+    }
+
+    public getCarInfo(): string {
+        return `Name: ${this.name} Brand: ${this.brand} Chasis: ${this.chasisNumber} Model: ${this.model}}`
+    }
+
+    private getBrand(): string{
+        return `The brnd is ${this.brand}`
+    }
+
+    protected getName(): string{
+        return ` ${setTimeout(() => {
+            console.log(this.name)
+        }, 2000)}`
+    }
+}
+
